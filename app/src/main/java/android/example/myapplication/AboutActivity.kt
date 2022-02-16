@@ -13,5 +13,12 @@ class AboutActivity : AppCompatActivity() {
 
         val tv =findViewById<TextView>(R.id.tvResult)
         tv.text=name
+        val actionbar = supportActionBar
+        actionbar!!.title = "About"
+        actionbar!!.setDisplayHomeAsUpEnabled(true)
+    }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }
